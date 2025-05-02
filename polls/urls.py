@@ -4,7 +4,7 @@ from . import views
 app_name = 'polls'  # Це дозволяє використовувати простір імен у шаблонах: polls:login, polls:register тощо
 
 urlpatterns = [
-    path('', views.question_list, name='home'),  # Головна сторінка зі списком питань
+    path('', views.question_list, name='polls:question_list'),  # Головна сторінка зі списком питань
     path('register/', views.register_view, name='register'),  # Сторінка реєстрації
     path('login/', views.login_view, name='login'),  # Сторінка входу
     path('logout/', views.logout_view, name='logout'),  # Вихід
