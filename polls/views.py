@@ -16,7 +16,7 @@ def register_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)  # Автоматичний вхід після реєстрації
-            return redirect('home')  # 'home' має бути в urls.py
+            return redirect('polls:question_list')  # 'home' має бути в urls.py
     else:
         form = UserRegistrationForm()
     return render(request, 'register.html', {"form": form})
